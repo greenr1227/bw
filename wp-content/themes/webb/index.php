@@ -1,5 +1,5 @@
 
-***************************************************
+<!-- ***************************************************
 
 HOME PAGE
 
@@ -335,7 +335,7 @@ PROJECT PAGE
 
 -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -471,6 +471,156 @@ PROJECT PAGE
             });
 
             $('.carousel').slick({
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                fade: true,
+                prevArrow: null,
+                nextArrow: null,
+            });
+
+
+        });
+
+
+        $(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                if (winTop >= 30) {
+                    $("body").addClass("sticky-header");
+                } else {
+                    $("body").removeClass("sticky-header");
+                }
+            });
+        });
+    </script>
+   </body>
+</html> -->
+
+
+<!-- 
+***************************************************
+
+MEET BETH PAGE
+
+***************************************************
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>home</title>
+      <link rel="stylesheet" href="http://beth.dev/wp-content/themes/webb/style.css">
+   </head>
+   <body>
+      <header class="main-header">
+         <div class="inner-wrap">
+            <h1 class="site-title">
+               <a href="" class="logo">
+               <img src="http://beth.dev/wp-content/themes/webb/dist/images/BethWebb-Logo.svg" alt="Beth Webb" >
+               </a>
+            </h1>
+            <div id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div id="primary-nav" class="menu">
+               <ul>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/">Home</a></li>
+                  <li class="page_item page-item-18"><a href="http://beth.dev/index.php/portfolio/">Portfolio</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/book">Book</a></li>
+                  <li class="page_item page-item-16"><a href="http://beth.dev/index.php/meet-beth/">Meet Beth</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/">As Seen In</a></li>
+                  <li class="page_item page-item-22"><a href="http://beth.dev/index.php/social/">Social</a></li>
+                  <li class="page_item page-item-24"><a href="http://beth.dev/index.php/contact/">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <div class="inner-wrap">
+        <h2 class="page-title">Meet Beth</h2>
+
+        <section class="two-col">
+        <div class="two-one-col">
+          <div class="text-left large-lead">
+            <p>Through her sensory driven design approach, Beth Webb creates style sanctuaries—natural compositions that provide equal parts lasting well-being and transformative physical beauty. Known for incorporating classic proportions and iconic design details into uplifting light filled spaces, Beth’s design philosophy demonstrates how our 
+            five senses transport the instinctive process of design into the tangible.</p>
+            <p>With a Master’s degree from Sotheby’s in London, Beth’s gateway to her career in interior design began as an art dealer. Today as founder and Creative Director of Atlanta based Beth Webb Interiors, Beth has completed projects throughout the Southeast as well as residences 
+            in California, Connecticut, Michigan the Bahamas and Costa Rica.</p>
+            <p>As a noted industry ambassador and style influencer, Beth’s work is often featured in Elle Décor, Veranda House Beautiful, Traditional Home, Luxe, Milieu, 
+            Southern Accents and Atlanta Homes & Lifestyles.</p>
+            <p>In 2015 Beth won the Southeast Designer of the Year Award, Atlanta Home’s and Lifestyles Bath of the Year Award and was included in the prestigious Luxe 
+            Magazine Gold List in 2017.</p>
+            <p>Beth’s first book, AN EYE FOR BEAUTY, (Rizzoli), gives her design audience insight into her intuitive design process, 
+            celebrating interior that “speak to the senses.”</p>
+          </div>
+        </div>
+        <div class="two-one-col">
+          <div class="small-carousel">
+            <div class="slide">
+              <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-MeetBeth-Slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-MeetBeth-Slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-MeetBeth-Slide3.jpg" alt="">
+            </div>
+          </div>
+
+        <div class="quote">
+          <blockquote>
+            <p>Every home begins as a blank canvas,a plan, a way and a structure to encapsulate life. Only through its materials, furnishings and details does it become beautiful, comfortable and personal.</p> 
+          </blockquote>
+        </div>
+        </div>
+        </section>
+      </div>
+
+
+      <footer class="main-footer">
+         <div class="inner-wrap">
+            <h4 class="with-border">Share</h4>
+            <ul class="social">
+               <li><a href="" class="icon icon-facebook"></a></li>
+               <li><a href="" class="icon icon-instagram"></a></li>
+               <li><a href="" class="icon icon-twitter"></a></li>
+               <li><a href="" class="icon icon-pinterest"></a></li>
+            </ul>
+            <span class="copyright"><sup>&copy;</sup> 2017 Beth Webb Interiors. All Rights Reserved.</span>       
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $("#hamburger").click(
+                function() {
+                    $("#hamburger").toggleClass("open");
+
+
+                    $('#primary-nav').toggleClass('open');
+                }
+            );
+
+            $(".js-print").click(function() {
+                window.print();
+            });
+
+            $(".js-social-share").click(function() {
+                $(".social-list").stop().slideToggle("slow");
+
+            });
+
+            $('.carousel, .small-carousel').slick({
                 slidesToShow: 1,
                 autoplay: true,
                 autoplaySpeed: 5000,

@@ -1,0 +1,81 @@
+/* === Book Promo === */
+
+.book-promo{
+	.inner-wrap{
+		@include container;
+		display: flex;
+
+		@include grid-media($small-only) {
+			flex: 1 1 100%;
+		}
+
+		@include grid-media($large-and-above) {
+			align-items: center;
+			justify-content: space-between;
+			max-width: 64rem;
+			flex: 1;
+		}
+	}
+
+	.two-book-tall{
+		flex: 1;
+
+		.book-image{
+			max-width: 46%;
+			height: auto;
+			flex: 1;
+			@include margin(0 0.3125rem);
+		}
+	}
+
+	.book-information{
+		flex: 1;
+		text-align: center;
+		@include padding(1.25rem);
+	}
+
+	.book-bar-wide{
+		flex: 1;
+
+		.large-book-image{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.book-title{
+		border-bottom: $base-border;
+		@include padding(0 0 0.9375rem);
+
+		h2, p{
+			font-size: 1.0625rem; //px
+			text-transform: uppercase; 
+			font-weight: 300;
+		}
+
+		h3{
+			font-size: 1.625rem; //29px
+		}
+
+		h2, h3, p{
+			line-height: 1.5rem;
+		}
+
+	}
+
+	.other-info{
+		@include padding(0.9375rem 0 0 );
+	}
+
+	.book-logo{
+		width: 75px;
+		@include margin(0 auto);
+		display: block;
+	}
+
+	.release-date{
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+
+}

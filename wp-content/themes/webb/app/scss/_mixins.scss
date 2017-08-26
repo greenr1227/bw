@@ -1,0 +1,257 @@
+/* === Mixins === */
+
+@mixin arrow($direction, $width, $height, $fill, $stroke, $stroke-width, $position: relative) {
+  @include size(0);
+  border-#{$direction}: 0;
+  border-color: transparent;
+  border-left-width: $width / 2;
+  border-right-width: $width / 2;
+  border-style: solid;
+  border-width: $height;
+  display: inline-block;
+  position: $position;
+
+  @if $direction == 'top' {
+    border-bottom-color: $stroke;
+  }
+
+  @if $direction == 'bottom' {
+    border-top-color: $stroke;
+  }
+
+  @if $direction == 'left' {
+    border-right-color: $stroke;
+  }
+
+  @if $direction == 'right' {
+    border-left-color: $stroke;
+  }
+
+  &::after {
+    @include size(0);
+    border-#{$direction}: 0;
+    border-color: transparent;
+    border-left-width: (($width / 2) - $stroke-width);
+    border-right-width: (($width / 2) - $stroke-width);
+    border-style: solid;
+    border-width: $height - $stroke-width;
+    content: '';
+    position: absolute;
+
+    @if $direction == 'top' {
+      border-bottom-color: $fill;
+      bottom: -$height;
+      left: (-$width / 2) + $stroke-width;
+    }
+    @if $direction == 'bottom' {
+      border-top-color: $fill;
+      left: (-$width / 2) + $stroke-width;
+      top: -$height;
+    }
+    @if $direction == 'left' {
+      border-right-color: $fill;
+      bottom: -$height + $stroke-width;
+      left: $stroke-width;
+    }
+    @if $direction == 'right' {
+      border-left-color: $fill;
+      bottom: -$height + $stroke-width;
+      right: $stroke-width;
+    }
+  }
+}
+
+
+
+@mixin border($type: top-bottom, $padding: 3.75rem null, $gutter: $grid-gutter-large, $color: $color-regent-gray) {
+  @include padding($padding);
+  position: relative;
+
+  @if type == 'top-bottom' or $type == 'top' {
+    &::before {
+      @include position(absolute, 0 $gutter null $gutter);
+      background-color: $color;
+      content: '';
+      height: .0625rem; // 1px
+      top: 0;
+    }
+  }
+
+  @if type == 'top-bottom' or $type == 'bottom' {
+    &::after {
+      @include position(absolute, null $gutter 0 $gutter);
+      background-color: $color;
+      bottom: 0;
+      content: '';
+      height: .0625rem; // 1px
+    }
+  }
+}
+
+// Untsyled button
+@mixin button-unstyled {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  font-smoothing: auto;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-align: left;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+// Button stripes
+@mixin button-stripes {
+  background: linear-gradient(
+    to right,
+    $button-stripes-color, $button-stripes-color 20%,
+    transparent 20%, transparent 40%,
+    $button-stripes-color 40%, $button-stripes-color 60%,
+    transparent 60%, transparent 80%,
+    $button-stripes-color 80%, $button-stripes-color 100%
+  );
+}
+
+// Container
+@mixin container($position: 'relative') {
+  @include grid-container;
+  @include margin(null auto);
+  max-width: $max-container-width;
+
+  @if $position == 'absolute' {
+    position: absolute;
+  }
+
+  @if $position == 'relative' {
+    position: relative;
+  }
+
+  @include grid-media($small-only) {
+    @include padding(null $grid-margin-small);
+  }
+
+  @include grid-media($medium-only) {
+    @include padding(null $grid-margin-medium);
+  }
+
+  @include grid-media($large-only) {
+    @include padding(null $grid-margin-large);
+  }
+
+  @include grid-media($very-large-and-above) {
+    @include padding(null $grid-margin-very-large);
+  }
+}
+
+.container {
+  @include container;
+}
+
+@mixin container-wrapper {
+  @include clearfix;
+
+  @include grid-media($small-only) {
+    @include grid-collapse;
+  }
+
+  @include grid-media($medium-only) {
+    @include grid-collapse;
+  }
+
+  @include grid-media($large-only) {
+    @include grid-collapse;
+  }
+
+  @include grid-media($very-large-only) {
+    @include grid-collapse;
+  }
+}
+
+.container-wrapper {
+  @include container-wrapper;
+}
+
+
+@mixin fade-in($duration: 250ms) {
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity $duration 0s;
+  visibility: visible;
+}
+
+@mixin fade-out($duration: 250ms) {
+  opacity: 0;
+  transition: visibility 0s linear $duration, opacity $duration 0s;
+  visibility: hidden;
+}
+
+// Fonts
+// Custom fonts
+@mixin font($name: 'Requiem Display Book') {
+  @if $name == 'Requiem Roman' {
+    font-family: "Requiem Display A", "Requiem Display B";
+    font-style: normal;
+    font-weight: 400;
+  } @else if $name == 'Requiem Italic' {
+    font-family: "Requiem Display A", "Requiem Display B";
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+@mixin font($name: 'Ringside Book') {
+  @if $name == 'Ringside Regular' {
+    font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+    font-style: normal;
+    font-weight: 400;
+  } @else if $name == 'Ringside Italic' {
+    font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+    font-style: italic;
+    font-weight: 400;
+  } @else if $name == 'Ringside Bold' {
+    font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+    font-style: normal;
+    font-weight: 700;
+  } @else if $name == 'Ringside Bold Italic' {
+    font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+    font-style: italic;
+    font-weight: 700;
+  }
+}
+
+// Font smoothing
+// Only use for light text on dark background
+// sass-lint:disable no-vendor-prefixes
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+// sass-lint:disable no-vendor-prefixes
+@mixin text-stroke($small-width: 1px, $large-width: 3px, $color: $color-primary) {
+
+  color: $color-white;
+  text-shadow: $large-width $large-width $color-primary;
+
+  @supports(-webkit-text-stroke: $small-width $color) {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: $color;
+    -webkit-text-stroke-width: $small-width;
+    color: transparent;
+    text-shadow: none;
+
+    @include grid-media($large-and-above) {
+      -webkit-text-stroke-width: $large-width;
+    }
+  }
+}
+
+// Unstyled list
+@mixin unstyled-list {
+  @include margin(0 null);
+  list-style-type: none;
+  padding-left: 0;
+}

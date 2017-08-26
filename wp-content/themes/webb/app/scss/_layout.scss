@@ -1,0 +1,11 @@
+*{
+	box-sizing: border-box;
+}
+
+.inner-wrap{
+	@include container;
+
+	@include grid-media($large-and-above) {
+		// max-width: 64rem;
+	}
+}

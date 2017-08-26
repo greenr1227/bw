@@ -1,0 +1,19 @@
+/* === Hero Slider === */
+
+
+.hero-picture,
+.project-picture{
+	@include size(100%);
+	font-family: 'object-fit: contain;';
+	object-fit: cover;
+	max-width: $max-container-width-large;
+
+	img{
+		width: 100%;
+		height: auto;
+		font-family: 'object-fit: contain;';
+		object-fit: cover;
+    }
+}
+
+

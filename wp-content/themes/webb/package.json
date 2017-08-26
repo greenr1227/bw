@@ -1,0 +1,69 @@
+{
+  "name": "beth",
+  "version": "1.0.0",
+  "description": "Front-end code for beth.us.",
+  "main": "dist/js/beth.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:thinkinc/beth-fe.git"
+  },
+  "author": "Rachael",
+  "private": true,
+  "scsslintConfig": "/.sass-lint.yaml",
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "jquery": "jQuery"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^2.0.0",
+    "browserify": "^14.4.0",
+    "browserify-shim": "^3.8.14",
+    "del": "^2.2.2",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-parker": "^0.1.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-gifsicle": "^5.1.0",
+    "jquery": "^3.2.1",
+    "jquery-placeholder": "^2.3.1",
+    "js-yaml": "^3.8.4",
+    "node-normalize-scss": "^3.0.0",
+    "object-fit-images": "^3.2.3",
+    "path": "^0.12.7",
+    "picturefill": "^3.0.2",
+    "run-sequence": "^1.2.2",
+    "slick-carousel": "^1.6.0",
+    "svg4everybody": "^2.1.8",
+    "tooltipster": "^4.2.5",
+    "underscore": "^1.8.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "jquery-validation": "^1.16.0"
+  }
+}

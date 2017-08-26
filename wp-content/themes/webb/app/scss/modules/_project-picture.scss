@@ -1,0 +1,155 @@
+.project-img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @include padding(0 1.875rem);
+    &.project-page {
+        height: 26.25rem;
+
+        .project-picture{
+        	img{
+        		@include size(100%);
+        	}
+        }
+    }
+    .project-name {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font-weight: bold;
+        background: $translucent-white;
+        width: 50%;
+        text-align: center;
+        @include padding(1.25rem);
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 1.125rem;
+        @include grid-media($large-and-above) {
+            font-size: 2.25rem;
+        }
+    }
+}
+.share-print {
+    text-align: center;
+    a {
+        font-family: "Ringside Regular SSm A","Ringside Regular SSm B";
+        font-style: normal;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.875rem;
+    }
+}
+.social-list {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    a {
+        width: 1rem;
+        height: 1rem;
+        margin: 1rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-align: center;
+        display: inline-block;
+    }
+    .icon {
+        &:before {
+            content: "";
+            display: block;
+            background-repeat: no-repeat;
+            width: 1rem;
+            height: 1rem;
+        }
+        &.icon-facebook {
+            &:before {
+                background-image: url(http://beth.dev/wp-content/themes/webb/dist/images/icon-Facebook.svg);
+            }
+        }
+        &.icon-pinterest {
+            &:before {
+                background-image: url(http://beth.dev/wp-content/themes/webb/dist/images/icon-Pinterest.svg);
+            }
+        }
+        &.icon-instagram {
+            &:before {
+                background-image: url(http://beth.dev/wp-content/themes/webb/dist/images/icon-Instagram.svg);
+            }
+        }
+        &.icon-twitter {
+            &:before {
+                background-image: url(http://beth.dev/wp-content/themes/webb/dist/images/icon-Twitter.svg);
+            }
+        }
+    }
+}
+
+.profile-post-navigation{
+	margin-bottom: 20px;
+	@include padding(0 2rem);
+}
+.prev-post, .next-post{
+	position: absolute;
+	font-size: 0.875rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+	font-style: normal;
+	font-weight: 300;
+}
+
+.prev-post{
+	left: 0;
+}
+
+.next-post{
+	right: 0;
+}
+
+
+.row-large{
+	@include padding(0 1.875rem);
+	margin-bottom: 30px;
+	img{
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.row-two-col{
+	@include padding(0 1.875rem);
+	margin-bottom: 30px;
+
+	img{
+		width: 100%;
+
+		&:first-child{
+			margin-bottom: 30px;
+		}
+	}
+
+	@include grid-media($large-and-above) {
+		display: flex;
+
+
+		img{
+			width: 50%;
+			height:auto;
+			&:first-child{
+				padding-right: 30px;
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+
+}
+

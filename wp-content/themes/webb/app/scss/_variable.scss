@@ -1,0 +1,182 @@
+/* ======  Variables ====== */
+
+// Animations
+$base-duration: 250ms;
+$base-timing: ease-out;
+$base-timing-alt: ease-in-out;
+$base-timing-cubic-bezier: cubic-bezier(.17, .04, .03, 1);
+
+// Colors (http://chir.ag/projects/name-that-color)
+$color-white: #ffffff;
+$translucent-white: rgba(255,255,255, 0.8);
+$color-zorba: #a49b94;
+$color-primary: $color-zorba;
+
+// Borders
+$base-border-color: $color-zorba;
+$base-border: 1px solid $color-zorba;
+// $secondary-border: 1px solid $color-dusty-gray;
+
+
+// File paths
+$font-path: '../fonts';
+$image-path: '../img';
+$slick-font-path: '/fonts/';
+$slick-loader-path: '/img/gif/';
+
+
+// Line height
+$base-line-height: 1.35;
+$heading-line-height: 1.1;
+
+// Magic Numbers
+$max-container-width: 100rem; // 920rem
+$max-container-width-large: 100rem; // 1600rem
+
+
+// Header
+$header-height-mobile: 5rem; // 80px
+$header-height-desktop: 6.5625rem; // 105px
+
+
+// Hamburger
+$hamburger-transition-duration: 200ms;
+$hamburger-transition-timing-function: linear;
+
+// GRID
+
+// Gutters
+$grid-gutter-small: .75rem; // 12px
+$grid-gutter-medium: 1.25rem; // 20px
+$grid-gutter-large: 1.25rem; // 20px
+$grid-gutter-very-large: 1.25rem; // 20px
+$grid-gutter-jumbo: 1.25rem; // 20px
+
+// Margins
+$grid-margin-small: percentage(20 / 320);
+$grid-margin-medium: percentage(42 / 768);
+$grid-margin-large: percentage(72 / 1024);
+$grid-margin-very-large: percentage(130 / 1440);
+
+// Columns
+$grid-columns-small: 4;
+$grid-columns-medium: 8;
+$grid-columns-large: 12;
+$grid-columns-very-large: 12;
+$grid-columns-jumbo: 12;
+
+// Bourbon Neat
+$neat-grid: (
+  columns: $grid-columns-large,
+  gutter: $grid-gutter-medium
+);
+
+// Breakpoints
+$media-small: 375px !default;
+$media-medium: 768px !default;
+$media-large: 1024px !default;
+$media-very-large: 1440px !default;
+
+$small-only: (
+  columns: $grid-columns-small,
+  gutter: $grid-gutter-small,
+  media: 'only screen and (max-width: #{$media-small} - 1)',
+);
+
+$medium-and-below: (
+  columns: $grid-columns-medium,
+  gutter: $grid-gutter-medium,
+  media: 'only screen and (max-width: #{$media-medium} - 1)',
+);
+
+$medium-only: (
+  columns: $grid-columns-medium,
+  gutter: $grid-gutter-medium,
+  media: 'only screen and (min-width: #{$media-small}) and (max-width: #{$media-medium} - 1)',
+);
+
+$medium-and-above: (
+  columns: $grid-columns-medium,
+  gutter: $grid-gutter-medium,
+  media: 'only screen and (min-width: #{$media-small})',
+);
+
+$medium-and-large: (
+  columns: $grid-columns-large,
+  gutter: $grid-gutter-medium,
+  media: 'only screen and (min-width: #{$media-small}) and (max-width: #{$media-large} - 1)',
+);
+
+$large-and-below: (
+  columns: $grid-columns-large,
+  gutter: $grid-gutter-large,
+  media: 'only screen and (max-width: #{$media-large} - 1)',
+);
+
+$large-only: (
+  columns: $grid-columns-large,
+  gutter: $grid-gutter-large,
+  media: 'only screen and (min-width: #{$media-medium}) and (max-width: #{$media-large} - 1)',
+);
+
+$large-and-very-large: (
+  columns: $grid-columns-large,
+  gutter: $grid-gutter-large,
+  media: 'only screen and (min-width: #{$media-medium}) and (max-width: #{$media-very-large} - 1)',
+);
+
+$large-and-above: (
+  columns: $grid-columns-large,
+  gutter: $grid-gutter-large,
+  media: 'only screen and (min-width: #{$media-medium})',
+);
+
+$very-large-and-below: (
+  columns: $grid-columns-very-large,
+  gutter: $grid-gutter-very-large,
+  media: 'only screen and (max-width: #{$media-very-large} - 1)',
+);
+
+$very-large-only: (
+  columns: $grid-columns-very-large,
+  gutter: $grid-gutter-very-large,
+  media: 'only screen and (min-width: #{$media-large}) and (max-width: #{$media-very-large} - 1)',
+);
+
+$very-large-and-above: (
+  columns: $grid-columns-very-large,
+  gutter: $grid-gutter-very-large,
+  media: 'only screen and (min-width: #{$media-large})',
+);
+
+$jumbo-only: (
+  columns: $grid-columns-jumbo,
+  gutter: $grid-gutter-jumbo,
+  media: 'only screen and (min-width: #{$media-very-large})',
+);
+
+// Typography
+$base-font-size: 1rem; // 16px
+$sans-serif-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif-stack: 'Lucida Bright', Georgia, 'Times New Roman', serif;
+
+// Z-Index Scale
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
+
+// Z-index Applications
+$z-index-language-selector-list: $z-index-1;
+$z-index-hero: $z-index-1;
+$z-index-header: $z-index-9;
+$z-index-header-search: $z-index-9;
+$z-index-primary-navigation: $z-index-9;
+$z-index-mega-menu: $z-index-9;
+$z-index-models-viewer-filters: $z-index-10;

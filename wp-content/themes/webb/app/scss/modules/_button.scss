@@ -1,0 +1,15 @@
+/* === Buttons === */
+
+
+.button{
+	border: $base-border;
+	background: $translucent-white;
+	@include padding(.75rem);
+	display: inline-block;
+	text-transform: uppercase;
+	width: auto;
+	font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+	font-style: normal;
+	font-weight: 100;
+	font-size: 0.875rem; //14px
+}

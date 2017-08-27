@@ -1,5 +1,8 @@
 *{
 	box-sizing: border-box;
+    transition: all 0.5s ease;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 .inner-wrap{
@@ -7,5 +10,12 @@
 
 	@include grid-media($large-and-above) {
 		// max-width: 64rem;
+	}
+}
+
+.large-inner-wrap{
+	@include container;
+	@include grid-media($large-and-above) {
+		max-width: $max-container-width-large;
 	}
 }

@@ -83,17 +83,17 @@ HOME PAGE
      </section>
 
      <section class="book-promo">
-     	<div class="inner-wrap">
+     	<div class="large-inner-wrap">
      		<div class="two-book-tall">
 				<img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Home-BookBarTall.jpg" alt="" class="book-image">
 				<img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Home-BookBarTall.jpg" alt="" class="book-image">
      		</div>
      		<div class="book-information">
-     			<header class="book-title">
+     			<div class="book-title">
      				<h2>Beth Webb</h2>
      				<h3>An Eye for Beauty</h3>
      				<p>Rooms That Speak to the Senses</p>
-     			</header>
+     			</div>
      			<div class="other-info">
      				<p class="release-date">September 19, 2017</p>
 	     			<img src="http://beth.dev/wp-content/themes/webb/dist/images/rizzoli-ny-logo.png" alt="Rizzoli" class="book-logo">
@@ -138,8 +138,8 @@ HOME PAGE
                 $(".social-list").stop().slideToggle("slow");
 
             });
-            
-            $('.carousel').slick({
+
+            $('.carousel, .small-carousel').slick({
                 slidesToShow: 1,
                 autoplay: true,
                 autoplaySpeed: 5000,
@@ -150,7 +150,10 @@ HOME PAGE
                 prevArrow: null,
                 nextArrow: null,
             });
-
+            
+              $('.inner-wrap').each(function(i) {
+                $(this).hide().delay(i * 500).fadeIn(1000);
+          });
 
         });
 
@@ -165,9 +168,11 @@ HOME PAGE
                 }
             });
         });
+
+        
     </script>
    </body>
-</html> -->
+</html>  -->
 
 
 
@@ -178,8 +183,8 @@ PORTFOLIO PAGE
 ***************************************************
 
  -->
-<!-- 
-<!DOCTYPE html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -292,8 +297,8 @@ PORTFOLIO PAGE
                 $(".social-list").stop().slideToggle("slow");
 
             });
-            
-            $('.carousel').slick({
+
+            $('.carousel, .small-carousel').slick({
                 slidesToShow: 1,
                 autoplay: true,
                 autoplaySpeed: 5000,
@@ -305,6 +310,9 @@ PORTFOLIO PAGE
                 nextArrow: null,
             });
 
+              $('.inner-wrap').each(function(i) {
+                $(this).hide().delay(i * 500).fadeIn(1000);
+          });
 
         });
 
@@ -319,10 +327,11 @@ PORTFOLIO PAGE
                 }
             });
         });
+
     </script>
    </body>
-</html>
- -->
+</html> -->
+
 
 
 
@@ -470,7 +479,7 @@ PROJECT PAGE
 
             });
 
-            $('.carousel').slick({
+            $('.carousel, .small-carousel').slick({
                 slidesToShow: 1,
                 autoplay: true,
                 autoplaySpeed: 5000,
@@ -482,6 +491,9 @@ PROJECT PAGE
                 nextArrow: null,
             });
 
+              $('.inner-wrap').each(function(i) {
+                $(this).hide().delay(i * 500).fadeIn(1000);
+          });
 
         });
 
@@ -496,10 +508,11 @@ PROJECT PAGE
                 }
             });
         });
+
     </script>
    </body>
-</html> -->
-
+</html> 
+ -->
 
 <!-- 
 ***************************************************
@@ -510,7 +523,7 @@ MEET BETH PAGE
 
 -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -647,5 +660,539 @@ MEET BETH PAGE
             });
         });
     </script>
+   </body>
+</html> -->
+
+
+
+<!-- 
+***************************************************
+
+AS SEEN IN PAGE
+
+***************************************************
+
+-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>home</title>
+      <link rel="stylesheet" href="http://beth.dev/wp-content/themes/webb/style.css">
+   </head>
+   <body>
+      <header class="main-header">
+         <div class="inner-wrap">
+            <h1 class="site-title">
+               <a href="" class="logo">
+               <img src="http://beth.dev/wp-content/themes/webb/dist/images/BethWebb-Logo.svg" alt="Beth Webb" >
+               </a>
+            </h1>
+            <div id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div id="primary-nav" class="menu">
+               <ul>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/">Home</a></li>
+                  <li class="page_item page-item-18"><a href="http://beth.dev/index.php/portfolio/">Portfolio</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/book">Book</a></li>
+                  <li class="page_item page-item-16"><a href="http://beth.dev/index.php/meet-beth/">Meet Beth</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/">As Seen In</a></li>
+                  <li class="page_item page-item-22"><a href="http://beth.dev/index.php/social/">Social</a></li>
+                  <li class="page_item page-item-24"><a href="http://beth.dev/index.php/contact/">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <div class="inner-wrap">
+        <h2 class="page-title">As Seen In</h2>
+  
+        <div class="inner-wrap">
+          <section class="press-items">
+            <div class="press-item">
+              <div class="press-image">
+                <a href="" class="press-link" target="_blank">
+                  <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-CoverImage.jpg" alt="" class="press-image">
+                  <h4 class="press-title">Magazine o1</h4>
+                  <h4 class="press-date">January 2017</h4>
+                </a>
+              </div>
+            </div>
+            <div class="press-item">
+              <div class="press-image">
+                <a href="" class="press-link" target="_blank">
+                  <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-CoverImage.jpg" alt="" class="press-image">
+                  <h4 class="press-title">Long Magazine Title o5</h4>
+                  <h4 class="press-date">January 2017</h4>                
+                </a>
+              </div>
+            </div>
+            <div class="press-item">
+              <div class="press-image">
+                <a href="" class="press-link" target="_blank">
+                  <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-CoverImage.jpg" alt="" class="press-image">
+                  <h4 class="press-title">EXTRA-LONG MAGAZINE TITLE o6</h4>
+                  <h4 class="press-date">January 2017</h4>                
+                </a>
+              </div>
+            </div>
+            <div class="press-item">
+              <div class="press-image">
+                <a href="" class="press-link" target="_blank">
+                  <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-CoverImage.jpg" alt="" class="press-image">
+                  <h4 class="press-title">Magazine o1</h4>
+                  <h4 class="press-date">January 2017</h4>                
+                </a>
+              </div>
+
+            </div>
+            <div class="press-item">
+              <div class="press-image">
+                <a href="" class="press-link" target="_blank">
+                  <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-CoverImage.jpg" alt="" class="press-image">
+                  <h4 class="press-title">Magazine o1</h4>
+                  <h4 class="press-date">January 2017</h4>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="blog-block-items">
+          <div class="blog-block-item">
+            <div class="blog-block-image">
+              <a href="" class="blog-block-link">
+                <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-BlogImage.jpg" alt="" class="blog-block-item-image">
+                <h4 class="blog-block-item-title">Blog Title o1</h4>
+                <h4 class="blog-block-item-date">January 2017</h4>
+              </a>
+            </div>
+          </div>
+          <div class="blog-block-item">
+            <div class="blog-block-image">
+              <a href="" class="blog-block-link">
+                <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-BlogImage.jpg" alt="" class="blog-block-item-image">
+                <h4 class="blog-block-item-title">Blog Title o1</h4>
+                <h4 class="blog-block-item-date">January 2017</h4>
+              </a>
+            </div>
+          </div>
+          <div class="blog-block-item">
+            <div class="blog-block-image">
+              <a href="" class="blog-block-link">
+                <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-BlogImage.jpg" alt="" class="blog-block-item-image">
+                <h4 class="blog-block-item-title">Blog Title o1</h4>
+                <h4 class="blog-block-item-date">January 2017</h4>
+              </a>
+            </div>
+          </div>
+          <div class="blog-block-item">
+            <div class="blog-block-image">
+              <a href="" class="blog-block-link">
+                <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-BlogImage.jpg" alt="" class="blog-block-item-image">
+                <h4 class="blog-block-item-title">Blog Title o1</h4>
+                <h4 class="blog-block-item-date">January 2017</h4>
+              </a>
+            </div>
+          </div>
+          <div class="blog-block-item">
+            <div class="blog-block-image">
+              <a href="" class="blog-block-link">
+                <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-BlogImage.jpg" alt="" class="blog-block-item-image">
+                <h4 class="blog-block-item-title">Blog Title o1</h4>
+                <h4 class="blog-block-item-date">January 2017</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        </section>
+
+
+      </div>
+      <footer class="main-footer">
+         <div class="inner-wrap">
+            <h4 class="with-border">Share</h4>
+            <ul class="social">
+               <li><a href="" class="icon icon-facebook"></a></li>
+               <li><a href="" class="icon icon-instagram"></a></li>
+               <li><a href="" class="icon icon-twitter"></a></li>
+               <li><a href="" class="icon icon-pinterest"></a></li>
+            </ul>
+            <span class="copyright"><sup>&copy;</sup> 2017 Beth Webb Interiors. All Rights Reserved.</span>       
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $("#hamburger").click(
+                function() {
+                    $("#hamburger").toggleClass("open");
+
+
+                    $('#primary-nav').toggleClass('open');
+                }
+            );
+
+            $(".js-print").click(function() {
+                window.print();
+            });
+
+            $(".js-social-share").click(function() {
+                $(".social-list").stop().slideToggle("slow");
+
+            });
+
+            $('.carousel, .small-carousel').slick({
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                fade: true,
+                prevArrow: null,
+                nextArrow: null,
+            });
+
+              $('.inner-wrap').each(function(i) {
+                $(this).hide().delay(i * 500).fadeIn(1000);
+          });
+
+        });
+
+
+        $(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                if (winTop >= 30) {
+                    $("body").addClass("sticky-header");
+                } else {
+                    $("body").removeClass("sticky-header");
+                }
+            });
+        });
+
+        
+    </script>
+   </body>
+</html>   -->
+
+
+<!-- 
+***************************************************
+
+AS SEEN IN DETAIL PAGE
+
+***************************************************
+
+-->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>home</title>
+      <link rel="stylesheet" href="http://beth.dev/wp-content/themes/webb/style.css">
+   </head>
+   <body>
+      <header class="main-header">
+         <div class="inner-wrap">
+            <h1 class="site-title">
+               <a href="" class="logo">
+               <img src="http://beth.dev/wp-content/themes/webb/dist/images/BethWebb-Logo.svg" alt="Beth Webb" >
+               </a>
+            </h1>
+            <div id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div id="primary-nav" class="menu">
+               <ul>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/">Home</a></li>
+                  <li class="page_item page-item-18"><a href="http://beth.dev/index.php/portfolio/">Portfolio</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/book">Book</a></li>
+                  <li class="page_item page-item-16"><a href="http://beth.dev/index.php/meet-beth/">Meet Beth</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/">As Seen In</a></li>
+                  <li class="page_item page-item-22"><a href="http://beth.dev/index.php/social/">Social</a></li>
+                  <li class="page_item page-item-24"><a href="http://beth.dev/index.php/contact/">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <div class="inner-wrap">
+        <h2 class="page-title">As Seen In</h2>
+  
+        <div class="inner-wrap">
+          <section class="featured-press-item">
+            <div class="featured-press-item-image">
+              <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-CoverImage.jpg" alt="">
+              <h4 class="press-title">Long Magazine Title o5</h4>
+               <h4 class="press-date">January 2017</h4> 
+            </div>         
+          </section>
+        <section class="press-item-navigation">
+          <div class="inner-wrap">
+            <a href="" class="prev-post">&lt; Previous</a>
+            <a href="" class="next-post">Next &gt;</a>
+            <div class="share-print">
+              <a class="js-social-share" href="javascript:void(0)">Share</a> | <a class="js-print-pdf" href="PDF">Print</a>
+              <div class="social-list">
+                 <a class="icon icon-facebook" href="" target="_blank"></a>
+                 <a class="icon icon-instagram" href="" target="_blank"></a>
+                 <a class="icon icon-twitter" href="" target="_blank"></a>
+                 <a class="icon icon-pinterest" href="" target="_blank"></a>
+              </div>
+           </div>
+         </div>
+         </section>
+         <section class="featured-press-item-details inner-wrap">
+           <div class="featured-press-item-large-image">
+             <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-IndivSpread.jpg" alt="">
+           </div>
+           <div class="featured-press-item-large-image">
+             <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-IndivSpread.jpg" alt="">
+           </div>
+           <div class="featured-press-item-large-image">
+             <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-IndivSpread.jpg" alt="">
+           </div>
+           <div class="featured-press-item-large-image">
+             <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-IndivSpread.jpg" alt="">
+           </div>
+           <div class="featured-press-item-large-image">
+             <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Press-IndivSpread.jpg" alt="">
+           </div>
+         </section>
+        </div>
+      <footer class="main-footer">
+         <div class="inner-wrap">
+            <h4 class="with-border">Share</h4>
+            <ul class="social">
+               <li><a href="" class="icon icon-facebook"></a></li>
+               <li><a href="" class="icon icon-instagram"></a></li>
+               <li><a href="" class="icon icon-twitter"></a></li>
+               <li><a href="" class="icon icon-pinterest"></a></li>
+            </ul>
+            <span class="copyright"><sup>&copy;</sup> 2017 Beth Webb Interiors. All Rights Reserved.</span>       
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $("#hamburger").click(
+                function() {
+                    $("#hamburger").toggleClass("open");
+
+
+                    $('#primary-nav').toggleClass('open');
+                }
+            );
+
+            $(".js-print").click(function() {
+                window.print();
+            });
+
+            $(".js-social-share").click(function() {
+                $(".social-list").stop().slideToggle("slow");
+
+            });
+
+            $('.carousel, .small-carousel').slick({
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                fade: true,
+                prevArrow: null,
+                nextArrow: null,
+            });
+
+              $('.inner-wrap').each(function(i) {
+                $(this).hide().delay(i * 500).fadeIn(1000);
+          });
+
+        });
+
+
+        $(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                if (winTop >= 30) {
+                    $("body").addClass("sticky-header");
+                } else {
+                    $("body").removeClass("sticky-header");
+                }
+            });
+        });
+
+        
+    </script>
+   </body>
+</html>   -->
+
+
+<!-- 
+***************************************************
+
+CONTACT PAGE
+
+***************************************************
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>home</title>
+      <link rel="stylesheet" href="http://beth.dev/wp-content/themes/webb/style.css">
+   </head>
+   <body>
+      <header class="main-header">
+         <div class="inner-wrap">
+            <h1 class="site-title">
+               <a href="" class="logo">
+               <img src="http://beth.dev/wp-content/themes/webb/dist/images/BethWebb-Logo.svg" alt="Beth Webb" >
+               </a>
+            </h1>
+            <div id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div id="primary-nav" class="menu">
+               <ul>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/">Home</a></li>
+                  <li class="page_item page-item-18"><a href="http://beth.dev/index.php/portfolio/">Portfolio</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/book">Book</a></li>
+                  <li class="page_item page-item-16"><a href="http://beth.dev/index.php/meet-beth/">Meet Beth</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/">As Seen In</a></li>
+                  <li class="page_item page-item-22"><a href="http://beth.dev/index.php/social/">Social</a></li>
+                  <li class="page_item page-item-24"><a href="http://beth.dev/index.php/contact/">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <div class="inner-wrap">
+         <h2 class="page-title">Contact</h2>
+         <div class="inner-wrap">
+            <section class="two-col contact">
+               <div class="two-one-col">
+                  <div class="contact-info">
+                     <h3>Office:</h3>
+                     <p>425 Peachtree Hills Avenue</p>
+                     <p>Suite 11B - 4</p>
+                     <p>Atlanta, Georgia 30305</p>
+                     <a href="tel:4048696367" class="phone">404.869.6367</a>
+                     <a href="mailto:hello@bethwebb.com">Hello@Bethwebb.com</a>
+                     <h3>Social:</h3>
+                     <p>@BETHWEBB</p>
+                     <h3>Media Inquiries</h3>
+                     <a href="mailto:media@bethwebb.com">Media@bethwebb.com</a>
+                  </div>
+                  <div class="mailing-list">
+                     <h3>Mailing List</h3>
+                     <form action="" method="post" name="subscribe-form" class="validate subscribe-form" target="_blank" novalidate="">
+                        <input type="email" value="" name="EMAIL" placeholder="Enter E-mail" class="required email key-color-border"><input type="submit" value="Join" name="subscribe" class="button key-color-border key-color-background">
+                        <div id="mce-responses" class="clear">
+                           <div class="response" id="error-response" style="display:none"></div>
+                           <div class="response" id="success-response" style="display:none"></div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="two-one-col">
+                  <div class="small-carousel">
+                     <div class="slide">
+                        <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-MeetBeth-Slide1.jpg" alt="">
+                     </div>
+                     <div class="slide">
+                        <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-MeetBeth-Slide2.jpg" alt="">
+                     </div>
+                     <div class="slide">
+                        <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-MeetBeth-Slide3.jpg" alt="">
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+      <footer class="main-footer">
+         <div class="inner-wrap">
+            <h4 class="with-border">Share</h4>
+            <ul class="social">
+               <li><a href="" class="icon icon-facebook"></a></li>
+               <li><a href="" class="icon icon-instagram"></a></li>
+               <li><a href="" class="icon icon-twitter"></a></li>
+               <li><a href="" class="icon icon-pinterest"></a></li>
+            </ul>
+            <span class="copyright"><sup>&copy;</sup> 2017 Beth Webb Interiors. All Rights Reserved.</span>       
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script>
+         $(document).ready(function() {
+             $("#hamburger").click(
+                 function() {
+                     $("#hamburger").toggleClass("open");
+         
+         
+                     $('#primary-nav').toggleClass('open');
+                 }
+             );
+         
+             $(".js-print").click(function() {
+                 window.print();
+             });
+         
+             $(".js-social-share").click(function() {
+                 $(".social-list").stop().slideToggle("slow");
+         
+             });
+         
+             $('.carousel, .small-carousel').slick({
+                 slidesToShow: 1,
+                 autoplay: true,
+                 autoplaySpeed: 2500,
+                 dots: false,
+                 infinite: true,
+                 speed: 500,
+                 fade: true,
+                 prevArrow: null,
+                 nextArrow: null,
+             });
+         
+               $('.inner-wrap').each(function(i) {
+                 $(this).hide().delay(i * 500).fadeIn(1000);
+           });
+         
+         });
+         
+         
+         $(function() {
+             $(window).scroll(function() {
+                 var winTop = $(window).scrollTop();
+                 if (winTop >= 30) {
+                     $("body").addClass("sticky-header");
+                 } else {
+                     $("body").removeClass("sticky-header");
+                 }
+             });
+         });
+         
+         
+      </script>
    </body>
 </html>

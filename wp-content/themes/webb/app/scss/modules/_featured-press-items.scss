@@ -1,0 +1,43 @@
+/* === Featured Press Items === */
+
+
+.featured-press-item{
+	@include margin( 0 0 1.875rem 0);
+	padding-bottom: 1.875rem;
+
+	border-bottom: $base-border;
+
+	.featured-press-item-image{
+		margin: 0 auto;
+		text-align: center;
+
+		img{
+			width: auto;
+			height: 312px;
+		}
+
+		h4{
+			text-align: center;
+			text-transform: uppercase;
+
+			&.press-title{
+				font-size: 1.1875rem;
+			}
+
+			&.press-date{
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.featured-press-item-details{
+	@include margin(1.875rem 0);
+
+	.featured-press-item-large-image{
+		@include margin(0 0 1.875rem 0);
+		img{
+			width: 100%;
+		}
+	}
+}

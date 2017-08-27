@@ -10,6 +10,7 @@ $base-timing-cubic-bezier: cubic-bezier(.17, .04, .03, 1);
 $color-white: #ffffff;
 $translucent-white: rgba(255,255,255, 0.8);
 $color-zorba: #a49b94;
+$kabul: #54453D;
 $color-primary: $color-zorba;
 
 // Borders
@@ -55,8 +56,8 @@ $grid-gutter-jumbo: 1.25rem; // 20px
 // Margins
 $grid-margin-small: percentage(20 / 320);
 $grid-margin-medium: percentage(42 / 768);
-$grid-margin-large: percentage(72 / 1024);
-$grid-margin-very-large: percentage(130 / 1440);
+$grid-margin-large: percentage(40 / 1024);
+$grid-margin-very-large: percentage(50 / 1440);
 
 // Columns
 $grid-columns-small: 4;

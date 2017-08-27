@@ -1,9 +1,12 @@
 /* === Book Promo === */
 
 .book-promo{
-	.inner-wrap{
+	@include margin(1.875rem 0);
+	.large-inner-wrap{
 		@include container;
 		display: flex;
+		flex-direction: column;
+
 
 		@include grid-media($small-only) {
 			flex: 1 1 100%;
@@ -12,19 +15,31 @@
 		@include grid-media($large-and-above) {
 			align-items: center;
 			justify-content: space-between;
-			max-width: 64rem;
 			flex: 1;
+			flex-direction: row;
 		}
 	}
 
 	.two-book-tall{
 		flex: 1;
 
+		@include grid-media($large-and-above) {
+			height: auto;
+			display: flex;
+			flex-direction: row;
+		}
+
 		.book-image{
-			max-width: 46%;
+			width: 46%;
 			height: auto;
 			flex: 1;
+			border: $base-border;
 			@include margin(0 0.3125rem);
+
+			@include grid-media($large-and-above) {
+			    align-items: center;
+			    height: 200px;			
+			}
 		}
 	}
 
@@ -36,10 +51,18 @@
 
 	.book-bar-wide{
 		flex: 1;
+		@include grid-media($large-and-above) {
+			display: flex;
+		}
 
 		.large-book-image{
-			max-width: 100%;
+			width: 100%;
 			height: auto;
+			border: $base-border;
+			@include grid-media($large-and-above) {
+			    width: 100%;
+			    height: 200px;
+			}
 		}
 	}
 

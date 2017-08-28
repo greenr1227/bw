@@ -720,10 +720,35 @@ a {
     color: #54453D; }
 
 blockquote {
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased; }
+
+blockquote {
+  text-align: center;
+  position: relative;
+  margin: 30px 0; }
+  blockquote:before, blockquote:after {
+    font-size: 4rem;
+    position: absolute;
+    display: block; }
+  blockquote:before {
+    content: "\201C";
+    display: block;
+    font-size: 4rem;
+    position: absolute; }
+  blockquote:after {
+    content: "\201D";
+    display: block;
+    right: 0;
+    bottom: 0; }
 
 body {
-  font-family: "Requiem Display A", "Requiem Display B";
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   color: #a49b94;
   line-height: 1.35; }
 
@@ -1016,6 +1041,126 @@ p, ol, ul {
     font-size: 1.5rem;
     text-transform: uppercase; }
 
+/* === Book Tour === */
+.book-tour .book-information {
+  text-align: center; }
+  .book-tour .book-information h2, .book-tour .book-information h3, .book-tour .book-information p {
+    text-transform: uppercase;
+    font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+    -webkit-font-smoothing: antialiased; }
+  .book-tour .book-information h2 {
+    font-size: 1.1875rem; }
+  .book-tour .book-information h3 {
+    text-transform: capitalize;
+    font-size: 1.875rem; }
+
+.book-tour .book-image img {
+  width: 100%; }
+
+.book-tour .release-date {
+  margin-top: 1.25rem;
+  font-size: 1.6875rem; }
+
+.book-tour .content {
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  text-align: center; }
+
+.book-tour .pre-order-button {
+  text-align: center;
+  margin: 1.875rem 0; }
+
+.book-tour .quote blockquote p {
+  font-size: 1rem;
+  padding: 10px;
+  line-height: 2rem;
+  text-align: left; }
+  @media only screen and (min-width: 768px) {
+    .book-tour .quote blockquote p {
+      font-size: 1.8125rem; } }
+
+.book-tour .quote blockquote .cite {
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 2.5rem; }
+
+.book-tour .next-tour-date {
+  border-bottom: 1px solid #a49b94; }
+
+.book-tour .three-col {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.875rem; }
+  .book-tour .three-col::after {
+    clear: both;
+    content: "";
+    display: block; }
+  @media only screen and (max-width: 374px) {
+    .book-tour .three-col {
+      padding-right: 6.25%;
+      padding-left: 6.25%; } }
+  @media only screen and (min-width: 375px) and (max-width: 767px) {
+    .book-tour .three-col {
+      padding-right: 5.46875%;
+      padding-left: 5.46875%; } }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .book-tour .three-col {
+      padding-right: 3.90625%;
+      padding-left: 3.90625%; } }
+  @media only screen and (min-width: 1024px) {
+    .book-tour .three-col {
+      padding-right: 3.47222%;
+      padding-left: 3.47222%; } }
+  @media only screen and (min-width: 768px) {
+    .book-tour .three-col {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; } }
+  .book-tour .three-col .book-tour-information {
+    text-align: center;
+    padding: 20px; }
+  .book-tour .three-col .three-one-col {
+    flex: 1; }
+    .book-tour .three-col .three-one-col:nth-child(2) {
+      flex: 2; }
+
+.book-tour .book-tour-image img {
+  width: 100%;
+  align-self: center; }
+
+.book-tour .tour-dates-container h3, .book-tour .tour-dates-container .tour-city-state {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+  font-size: 1.3rem; }
+
+.book-tour .tour-dates-container h3 {
+  padding: 1.875rem 0; }
+
+.book-tour .tour-dates-container .tour-city-state {
+  font-size: 1.875rem; }
+
+.book-tour .tour-dates-container .tour-time-range, .book-tour .tour-dates-container .venue-name p {
+  font-size: 1.375rem; }
+
+.book-tour .tour-dates-container .tour-date {
+  font-size: 1.375rem;
+  text-transform: capitalize;
+  padding: 0 0; }
+  .book-tour .tour-dates-container .tour-date .tour-month {
+    text-transform: uppercase; }
+
+.book-tour .tour-dates-container .venue-address {
+  text-transform: uppercase;
+  font-size: 1rem; }
+
+.book-tour .tour-dates-container .tour-location, .book-tour .tour-dates-container .venue-name, .book-tour .tour-dates-container .venue-address {
+  margin-bottom: 0.9375rem; }
+
 /* === Buttons === */
 .button {
   border: 1px solid #a49b94;
@@ -1028,6 +1173,11 @@ p, ol, ul {
   font-style: normal;
   font-weight: 100;
   font-size: 0.875rem; }
+  .button.dark {
+    background: #a49b94;
+    color: #ffffff; }
+  .button:hover {
+    background: #54453D; }
 
 /* === Contact === */
 .contact .contact-info, .contact .mailing-list {
@@ -1446,15 +1596,22 @@ body.sticky-header {
   transition: opacity 1s linear;
   background: rgba(255, 255, 255, 0.8);
   z-index: 100;
-  width: 150px;
+  width: 250px;
   text-align: left;
   text-transform: uppercase;
   font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   -webkit-font-smoothing: antialiased;
   letter-spacing: 1px;
   font-size: 0.9375rem; }
+  @media only screen and (min-width: 768px) {
+    #primary-nav ul {
+      padding: 20px; } }
   #primary-nav li {
     padding: 10px 0; }
+    @media only screen and (min-width: 768px) {
+      #primary-nav li {
+        padding: 0 0;
+        line-height: 2rem; } }
   #primary-nav a {
     padding: 10px; }
   @media only screen and (max-width: 767px) {
@@ -1491,7 +1648,7 @@ header + * {
   width: 100%;
   height: auto; }
 
-.two-col p, .two-col blockquote {
+.two-col p {
   font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   line-height: 2rem;
   font-weight: 300;
@@ -1534,10 +1691,35 @@ a {
     color: #54453D; }
 
 blockquote {
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased; }
+
+blockquote {
+  text-align: center;
+  position: relative;
+  margin: 30px 0; }
+  blockquote:before, blockquote:after {
+    font-size: 4rem;
+    position: absolute;
+    display: block; }
+  blockquote:before {
+    content: "\201C";
+    display: block;
+    font-size: 4rem;
+    position: absolute; }
+  blockquote:after {
+    content: "\201D";
+    display: block;
+    right: 0;
+    bottom: 0; }
 
 body {
-  font-family: "Requiem Display A", "Requiem Display B";
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   color: #a49b94;
   line-height: 1.35; }
 

@@ -1048,7 +1048,7 @@ CONTACT PAGE
 ***************************************************
 
 -->
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -1126,6 +1126,386 @@ CONTACT PAGE
                   </div>
                </div>
             </section>
+         </div>
+      </div>
+      <footer class="main-footer">
+         <div class="inner-wrap">
+            <h4 class="with-border">Share</h4>
+            <ul class="social">
+               <li><a href="" class="icon icon-facebook"></a></li>
+               <li><a href="" class="icon icon-instagram"></a></li>
+               <li><a href="" class="icon icon-twitter"></a></li>
+               <li><a href="" class="icon icon-pinterest"></a></li>
+            </ul>
+            <span class="copyright"><sup>&copy;</sup> 2017 Beth Webb Interiors. All Rights Reserved.</span>       
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script>
+         $(document).ready(function() {
+             $("#hamburger").click(
+                 function() {
+                     $("#hamburger").toggleClass("open");
+         
+         
+                     $('#primary-nav').toggleClass('open');
+                 }
+             );
+         
+             $(".js-print").click(function() {
+                 window.print();
+             });
+         
+             $(".js-social-share").click(function() {
+                 $(".social-list").stop().slideToggle("slow");
+         
+             });
+         
+             $('.carousel, .small-carousel').slick({
+                 slidesToShow: 1,
+                 autoplay: true,
+                 autoplaySpeed: 2500,
+                 dots: false,
+                 infinite: true,
+                 speed: 500,
+                 fade: true,
+                 prevArrow: null,
+                 nextArrow: null,
+             });
+         
+               $('.inner-wrap').each(function(i) {
+                 $(this).hide().delay(i * 500).fadeIn(1000);
+           });
+         
+         });
+         
+         
+         $(function() {
+             $(window).scroll(function() {
+                 var winTop = $(window).scrollTop();
+                 if (winTop >= 30) {
+                     $("body").addClass("sticky-header");
+                 } else {
+                     $("body").removeClass("sticky-header");
+                 }
+             });
+         });
+         
+         
+      </script>
+   </body>
+</html> -->
+
+<!-- 
+***************************************************
+
+BOOK PAGE
+
+***************************************************
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>home</title>
+      <link rel="stylesheet" href="http://beth.dev/wp-content/themes/webb/style.css">
+   </head>
+   <body>
+      <header class="main-header">
+         <div class="inner-wrap">
+            <h1 class="site-title">
+               <a href="" class="logo">
+               <img src="http://beth.dev/wp-content/themes/webb/dist/images/BethWebb-Logo.svg" alt="Beth Webb" >
+               </a>
+            </h1>
+            <div id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div id="primary-nav" class="menu">
+               <ul>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/">Home</a></li>
+                  <li class="page_item page-item-18"><a href="http://beth.dev/index.php/portfolio/">Portfolio</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/book">Book</a></li>
+                  <li class="page_item page-item-16"><a href="http://beth.dev/index.php/meet-beth/">Meet Beth</a></li>
+                  <li class="page_item page-item-20"><a href="http://beth.dev/index.php/media/">As Seen In</a></li>
+                  <li class="page_item page-item-22"><a href="http://beth.dev/index.php/social/">Social</a></li>
+                  <li class="page_item page-item-24"><a href="http://beth.dev/index.php/contact/">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <div class="inner-wrap">
+         <h2 class="page-title">Book</h2>
+         <div class="inner-wrap">
+          <div class="book-tour">
+            <section class="two-col">
+               <div class="two-one-col">
+                  <div class="book-information">
+                    <div class="book-title">
+                      <h2>Beth Webb</h2>
+                      <h3>An Eye for Beauty</h3>
+                      <p>Rooms That Speak to the Senses</p>
+                    </div>
+                    <div class="book-image">
+                      <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-Cover.jpg" alt="">
+                    </div>
+                    <p class="release-date">September 19, 2017</p>
+                  </div>
+               </div>
+               <div class="two-one-col">
+                  <div class="pre-order-button">
+                    <a href="" class="button dark">Pre-Order Now</a>
+                  </div>
+                  <div class="small-carousel">
+                     <div class="slide">
+                        <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-Slide1.jpg" alt="">
+                     </div>
+                     <div class="slide">
+                        <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-Slide2.jpg" alt="">
+                     </div>
+                  </div>
+                  <p class="content">foreward by VERANDA Editor-in-Chief CLINTON SMITH</p>
+               </div>
+
+            </section>
+            <div class="quote">
+              <blockquote>
+                <p>Every home begins as a blank canvas,a plan, a way and a structure to encapsulate life. Only through its materials, furnishings and details does it become beautiful, comfortable and personal.</p> 
+                <p class="cite">- Clinton Smith</p>
+              </blockquote>
+          </div>
+
+          <h2 class="page-title alt">Book Tour</h2>
+
+          <section class="tour-dates-container">
+            <div class="next-tour-date">
+              <h3>- Next Stop -</h3>
+
+              <div class="three-col next-date">
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-information">
+                    <div class="tour-location">
+                      <h2 class="tour-city-state">Atlanta, GA</h2>
+                      <h3 class="tour-date">Saturday <span class="tour-month">August</span> 7, 2017</h3>
+                      <p class="tour-time-range">12:00 - 5:00 PM</p>
+                    </div>
+                    <div class="venue-name">
+                      <p class="tour-location-one">Location Line 1</p>
+                      <p class="tour-location-two">Location Line 2</p>
+                      <p class="tour-location-three">Location Line 3</p>
+                    </div>
+                    <div class="venue-address">
+                      <p class="tour-address-street">625 E Main St No. 101</p>
+                      <p class="tour-address-city-zip">Aspen, CO 81611</p>
+                      <p class="tour-address-phone">(970) 544-2055</p>
+                    </div>
+                    <div class="rsvp-block">
+                      <p class="rsvp-date">R.S.V.P by June 30th to</p>
+                      <a href="mailto:" class="rsvp-email">rsvp@aspendesignroom.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming-dates">
+              <h3>- Upcoming -</h3>
+
+              <div class="three-col">
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-information">
+                    <div class="tour-location">
+                      <h2 class="tour-city-state">Atlanta, GA</h2>
+                      <h3 class="tour-date">Saturday <span class="tour-month">August</span> 7, 2017</h3>
+                      <p class="tour-time-range">12:00 - 5:00 PM</p>
+                    </div>
+                    <div class="venue-name">
+                      <p class="tour-location-one">Location Line 1</p>
+                      <p class="tour-location-two">Location Line 2</p>
+                      <p class="tour-location-three">Location Line 3</p>
+                    </div>
+                    <div class="venue-address">
+                      <p class="tour-address-street">625 E Main St No. 101</p>
+                      <p class="tour-address-city-zip">Aspen, CO 81611</p>
+                      <p class="tour-address-phone">(970) 544-2055</p>
+                    </div>
+                    <div class="rsvp-block">
+                      <p class="rsvp-date">R.S.V.P by June 30th to</p>
+                      <a href="mailto:" class="rsvp-email">rsvp@aspendesignroom.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="three-col">
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-information">
+                    <div class="tour-location">
+                      <h2 class="tour-city-state">Atlanta, GA</h2>
+                      <h3 class="tour-date">Saturday <span class="tour-month">August</span> 7, 2017</h3>
+                      <p class="tour-time-range">12:00 - 5:00 PM</p>
+                    </div>
+                    <div class="venue-name">
+                      <p class="tour-location-one">Location Line 1</p>
+                      <p class="tour-location-two">Location Line 2</p>
+                      <p class="tour-location-three">Location Line 3</p>
+                    </div>
+                    <div class="venue-address">
+                      <p class="tour-address-street">625 E Main St No. 101</p>
+                      <p class="tour-address-city-zip">Aspen, CO 81611</p>
+                      <p class="tour-address-phone">(970) 544-2055</p>
+                    </div>
+                    <div class="rsvp-block">
+                      <p class="rsvp-date">R.S.V.P by June 30th to</p>
+                      <a href="mailto:" class="rsvp-email">rsvp@aspendesignroom.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+                            <div class="three-col">
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-information">
+                    <div class="tour-location">
+                      <h2 class="tour-city-state">Atlanta, GA</h2>
+                      <h3 class="tour-date">Saturday <span class="tour-month">August</span> 7, 2017</h3>
+                      <p class="tour-time-range">12:00 - 5:00 PM</p>
+                    </div>
+                    <div class="venue-name">
+                      <p class="tour-location-one">Location Line 1</p>
+                      <p class="tour-location-two">Location Line 2</p>
+                      <p class="tour-location-three">Location Line 3</p>
+                    </div>
+                    <div class="venue-address">
+                      <p class="tour-address-street">625 E Main St No. 101</p>
+                      <p class="tour-address-city-zip">Aspen, CO 81611</p>
+                      <p class="tour-address-phone">(970) 544-2055</p>
+                    </div>
+                    <div class="rsvp-block">
+                      <p class="rsvp-date">R.S.V.P by June 30th to</p>
+                      <a href="mailto:" class="rsvp-email">rsvp@aspendesignroom.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+                            <div class="three-col">
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-information">
+                    <div class="tour-location">
+                      <h2 class="tour-city-state">Atlanta, GA</h2>
+                      <h3 class="tour-date">Saturday <span class="tour-month">August</span> 7, 2017</h3>
+                      <p class="tour-time-range">12:00 - 5:00 PM</p>
+                    </div>
+                    <div class="venue-name">
+                      <p class="tour-location-one">Location Line 1</p>
+                      <p class="tour-location-two">Location Line 2</p>
+                      <p class="tour-location-three">Location Line 3</p>
+                    </div>
+                    <div class="venue-address">
+                      <p class="tour-address-street">625 E Main St No. 101</p>
+                      <p class="tour-address-city-zip">Aspen, CO 81611</p>
+                      <p class="tour-address-phone">(970) 544-2055</p>
+                    </div>
+                    <div class="rsvp-block">
+                      <p class="rsvp-date">R.S.V.P by June 30th to</p>
+                      <a href="mailto:" class="rsvp-email">rsvp@aspendesignroom.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+                            <div class="three-col">
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-information">
+                    <div class="tour-location">
+                      <h2 class="tour-city-state">Atlanta, GA</h2>
+                      <h3 class="tour-date">Saturday <span class="tour-month">August</span> 7, 2017</h3>
+                      <p class="tour-time-range">12:00 - 5:00 PM</p>
+                    </div>
+                    <div class="venue-name">
+                      <p class="tour-location-one">Location Line 1</p>
+                      <p class="tour-location-two">Location Line 2</p>
+                      <p class="tour-location-three">Location Line 3</p>
+                    </div>
+                    <div class="venue-address">
+                      <p class="tour-address-street">625 E Main St No. 101</p>
+                      <p class="tour-address-city-zip">Aspen, CO 81611</p>
+                      <p class="tour-address-phone">(970) 544-2055</p>
+                    </div>
+                    <div class="rsvp-block">
+                      <p class="rsvp-date">R.S.V.P by June 30th to</p>
+                      <a href="mailto:" class="rsvp-email">rsvp@aspendesignroom.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="three-one-col">
+                  <div class="book-tour-image">
+                    <img src="http://beth.dev/wp-content/themes/webb/dist/images/Temp-Book-TourImg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
          </div>
       </div>
       <footer class="main-footer">

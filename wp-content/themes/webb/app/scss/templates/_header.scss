@@ -157,7 +157,7 @@ body {
     transition: opacity 1s linear;
     background: $translucent-white;
     z-index: $z-index-1;
-    width: 150px;
+    width: 250px;
     text-align: left;
 	text-transform: uppercase;
 	font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
@@ -165,8 +165,18 @@ body {
     letter-spacing: 1px;
     font-size: 0.9375rem;
 
+    ul{
+        @include grid-media($large-and-above) {
+            padding: 20px;
+        }
+    }
+
     li{
     	padding: 10px 0;
+        @include grid-media($large-and-above) {
+            padding: 0 0;
+            line-height: 2rem;
+        }
     }
 
     a{

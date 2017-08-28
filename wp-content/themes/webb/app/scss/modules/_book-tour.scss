@@ -1,0 +1,145 @@
+/* === Book Tour === */
+
+.book-tour{
+
+
+	.book-information{
+		text-align: center;
+
+		h2, h3, p{
+			text-transform: uppercase;
+			font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+			-webkit-font-smoothing: antialiased;
+		}
+
+		h2{
+			font-size: 1.1875rem;
+		}
+
+		h3{
+			text-transform: capitalize;
+			font-size: 1.875rem;
+		}
+	}
+
+	.book-image{
+		img{
+			width: 100%;
+		}
+	}
+
+	.release-date{
+		margin-top: 1.25rem;
+		font-size: 1.6875rem;
+	}
+
+	.content{
+		margin-top: 1.25rem;
+		font-size: 1.25rem;
+		text-align: center;
+	}
+
+	.pre-order-button{
+		text-align: center;
+		margin: 1.875rem 0;
+	}
+
+	.quote{
+		blockquote{
+			p{
+				font-size: 1rem;
+				padding: 10px;
+			    line-height: 2rem;
+			    text-align: left;
+
+			    @include grid-media($large-and-above) {
+					font-size: 1.8125rem;
+			    }
+			}
+
+			.cite{
+				text-transform: uppercase;
+				text-align: right;
+				margin-right: 2.5rem;
+			}
+		}
+	}
+
+	.next-tour-date{
+		border-bottom: 1px solid $color-zorba;
+	}
+
+	.three-col{
+		@include container;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 1.875rem;
+
+		 @include grid-media($large-and-above) {
+		 	flex-direction: row;
+		 	justify-content: center;
+		 	align-items: center;
+		 }
+
+		 .book-tour-information{
+		 	text-align: center;
+		 	padding: 20px;
+		 }
+
+		 .three-one-col{
+		 	flex: 1;
+
+		 	&:nth-child(2){
+		 		flex: 2;
+		 	}
+		 }
+	}
+	.book-tour-image{
+		img{
+			width: 100%;
+			align-self: center;
+		}
+	}
+
+	.tour-dates-container{
+		h3, .tour-city-state{
+			text-align: center;
+			text-transform: uppercase;
+			font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+			font-size: 1.3rem;
+		}
+
+		h3{
+			padding: 1.875rem 0;
+		}
+
+		.tour-city-state{
+			font-size: 1.875rem;
+		}
+
+		.tour-time-range, .venue-name p{
+			font-size: 1.375rem;
+		}
+
+		.tour-date{
+			font-size: 1.375rem;
+			text-transform: capitalize;
+			padding: 0 0;
+
+			.tour-month{
+				text-transform: uppercase;
+			}
+		}
+
+		.venue-address{
+			text-transform: uppercase;
+			font-size: 1rem;
+		}
+
+		.tour-location, .venue-name, .venue-address{
+			margin-bottom: 0.9375rem;
+		}
+	}
+}
+
+

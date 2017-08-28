@@ -15,10 +15,44 @@ a {
 
 blockquote {
   line-height: $heading-line-height;
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  
 }
 
+  blockquote{
+    text-align: center;
+    position: relative;
+    @include margin(30px 0);
+
+    &:before, &:after{
+      font-size: 4rem;
+      position: absolute;
+      display: block;
+    }
+
+    &:before{
+      content: "\201C";
+      display: block;
+      font-size: 4rem;
+      position: absolute;
+    }
+
+    &:after{
+      content: "\201D";
+      display: block;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+
 body {
-  font-family: "Requiem Display A", "Requiem Display B";
+  font-family: "Ringside Regular SSm A", "Ringside Regular SSm B";
   color: $color-primary;
   line-height: $base-line-height;
 }
